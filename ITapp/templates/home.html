@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+  
+  .row.heading h2 {
+      color: #fff;
+      font-size: 52.52px;
+      line-height: 95px;
+      font-weight: 400;
+      text-align: center;
+      margin: 0 0 40px;
+      padding-bottom: 20px;
+      /* text-transform: uppercase; */
+  }
+  ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+  .heading.heading-icon {
+      display: block;
+  }
+  .padding-lg {
+    display: block;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .practice-area.padding-lg {
+      padding-bottom: 55px;
+      padding-top: 55px;
+  }
+  .practice-area .inner{ 
+       border:1px solid #999999; 
+     text-align:center; 
+     margin-bottom:28px; 
+     padding:40px 25px;
+  }
+  .our-webcoderskull .cnt-block:hover {
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+      border: 0;
+  }
+  .practice-area .inner h3{ 
+      color:#3c3c3c; 
+    font-size:24px; 
+    font-weight:500;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 0;
+  }
+  .practice-area .inner p{ 
+      font-size:14px; 
+    line-height:22px; 
+    font-weight:400;
+  }
+  .practice-area .inner img{
+    display:inline-block;
+  }
+  
+  
+  .our-webcoderskull{
+    background: url("http://www.webcoderskull.com/img/right-sider-banner.png") no-repeat center top / cover;
+    
+  }
+  .our-webcoderskull .cnt-block{ 
+     float:left; 
+     width:100%; 
+     background:#fff; 
+     padding:30px 20px; 
+     text-align:center; 
+     border:2px solid #d5d5d5;
+     margin: 0 0 28px;
+  }
+  .our-webcoderskull .cnt-block figure{
+     width:148px; 
+     height:148px; 
+     border-radius:100%; 
+     display:inline-block;
+     margin-bottom: 15px;
+  }
+  .our-webcoderskull .cnt-block img{ 
+     width:148px; 
+     height:148px; 
+     border-radius:100%; 
+  }
+  .our-webcoderskull .cnt-block h3{ 
+     color:#2a2a2a; 
+     font-size:20px; 
+     font-weight:500; 
+     padding:6px 0;
+     text-transform:uppercase;
+  }
+  .our-webcoderskull .cnt-block h3 a{
+    text-decoration:none;
+    color:#2a2a2a;
+  }
+  .our-webcoderskull .cnt-block h3 a:hover{
+    color:#337ab7;
+  }
+  .our-webcoderskull .cnt-block p{ 
+     color:#2a2a2a; 
+     font-size:13px; 
+     line-height:20px; 
+     font-weight:400;}
+  
+  
+  .wrap {
+      display: flex;
+      background: white;
+      padding: 1rem 1rem 1rem 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 7px 7px 30px -5px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+  }
+  
+  .wrap:hover {
+      background: linear-gradient(135deg,#6394ff 0%,#0a193b 100%);
+      color: white;
+  }
+  
+  .ico-wrap {
+      margin: auto;
+  }
+  
+  .mbr-iconfont {
+      font-size: 4.5rem !important;
+      color: #313131;
+      margin: 1rem;
+      padding-right: 1rem;
+  }
+  .vcenter {
+      margin: auto;
+  }
+  
+  .mbr-section-title3 {
+      text-align: left;
+  }
+  h2 {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+  }
+  .display-5 {
+      font-family: 'Source Sans Pro',sans-serif;
+      font-size: 1.4rem;
+  }
+  .mbr-bold {
+      font-weight: 700;
+  }
+  
+   p {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      line-height: 25px;
+  }
+  .display-6 {
+      font-family: 'Source Sans Pro',sans-serif;
+      font-size: 1re}
+        body,html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  
+  .nav-link{
+    font-size: 20px;
+  }
+  footer a:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+  footer a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+  footer {
+    box-shadow: 0 2px 4px rgba(5, 5, 5, 0.2);
+    background-color:rgb(0, 114, 190);
+  
+  }
+     
+  .card{
+      width: 280px;
+      height: 360px;
+      padding: 2rem 1rem;
+      background: #fff;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+      transition: 0.5s ease-in-out;
+  }
+  
+  .card::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%; 
+      background: linear-gradient(to bottom,rgba(55, 24, 139, 0.5),rgba(150,201,61,1));
+      z-index: 2;
+      transition: 0.5s all; 
+      opacity: 0;
+  }
+  
+  .card:hover:before{
+      opacity: 1;
+  }
+  .card img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+  
+  .card-body{
+      position: relative;
+      z-index: 3;
+      color: #fff;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: 0.5s all;
+  
+  }
+  
+  .card:hover .card-body{
+      opacity: 1;
+      transform: translateY(0px);
+  }
+  .card.card-body h1{
+      margin: 0;
+  }
+  .card .card-body .card-text{
+      letter-spacing: 1px;
+      font-size: 15px;
+      margin-top: 8px;
+      margin-bottom: 20px;
+  }
+          .custom-container {
+              padding: 20px;
+          }
+  
+     
+          /* .custom-navbar{
+              background: transparent;
+             
+          } */
+          .navbar .navbar-nav .nav-link {
+          color: white;
+          }
+     
+           .image-overlay {
+              position: absolute;
+              top: 50%;
+              left: 10%;
+              transform: translateY(-50%);
+              padding: 20px;
+              color: white;
+              font-size: 24px;
+              font-weight: bold;
+              text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            
+           }
+  
+        .grid-item {
+              background-color: #e9ecef;
+              height: 200px;
+              border: 1px solid #ddd;
+             
+          }
+        
+          .big-grid-item {
+              height: 400px;
+          }
+      .custom-navbar{
+        background-color: #3c3c3c;
+      }
+      </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg  custom-navbar fixed-top" id="myNavbar">
+        <a class="navbar-brand" href="#" style="font-size: 25px;">Infocom</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown" >
+          <ul class="navbar-nav nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ca">Careers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ab">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#co">Contact</a>
+              <li class="nav-item">
+                <li class="nav-item">
+                  <a class="nav-link" href="#ser">Services</a>
+                  <li class="nav-item">
+                <a class="nav-link" href="{%url 'login'%}">Logout</a>
+              </li>
+           
+          </ul>
+        </div>
+      </nav>
+
+      <!-- <div class="container-fluid" style="padding: 0;">
+     
+        <img src="https://www.infosys.com/content/dam/infosys-web/en/global-resource/18/banner/generative-ai-lead.jpg" alt="Image description" class="img-fluid">
+    </div> 
+     <div class="image-overlay">
+            <h1>Welcome to Infocom</h1>
+            <p>Discover amazing things</p>
+             <h1>Infocom- An AI-first offering to accelerate <br> business value for global enterprises<br>using generative AI</h1>
+            <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+        </div> -->
+        <section style="margin-top: 60px;">
+          <div class="container-fluid" style="padding: 0; position: relative;">
+            <img src="https://www.infosys.com/content/dam/infosys-web/en/global-resource/18/banner/generative-ai-lead.jpg" alt="Image description" class="img-fluid">
+            <div class="image-overlay" style="position: absolute; top: 50%; left: 10%; transform: translateY(-50%);">
+              <h1  style="font-size: 2.5vw; line-height: 1.2;">Welcome to Infocom</h1>
+              <!-- <p>Discover amazing things</p> -->
+              <h1 style="font-size: 2.5vw; line-height: 1.2;">Infocom- An AI-first offering to accelerate <br> business value for global enterprises<br>using generative AI</h1>
+              <a href="#" class="btn btn-primary btn-lg"  style="font-size: 2.5vw; line-height: 1.2;">Get Started</a>
+            </div>
+          </div>
+        </section>
+        
+
+
+    <section> 
+        <div class="container" style="text-align: center; margin-top: 5%;margin-bottom: 5%;">
+            <h1>The next </h1>
+          </div>
+    <div class="container">
+        <div class="row" >
+            <div class="col-lg-3">
+                <div class="grid-item big-grid-item">
+                    <img src="https://www.infosys.com/content/dam/infosys-web/en/home/images/experience.jpg"  style="height: 100%; width: 100%;">
+                
+                  </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="grid-item">
+                         <img src="https://www.infosys.com/content/dam/infosys-web/en/home/images/assure.jpg"  style="height: 100%; width: 100%;">
+                      
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="grid-item">
+                            <img src="https://www.infosys.com/content/dam/infosys-web/en/home/images/innovate.jpg"  style="height: 100%; width: 100%;">
+                        </div>
+                    </div>
+                </div>
+                <div class="row" >
+                    <div class="col-lg-6">
+                        <div class="grid-item">
+                            <img src="https://www.infosys.com/content/dam/infosys-web/en/home/images/insight.jpg"  style="height: 100%; width: 100%;">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="grid-item">
+                            <img src="https://www.infosys.com/content/dam/infosys-web/en/home/images/accelerate.jpg"  style="height: 100%; width: 100%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</section>
+<section id="ca">
+  <div class="container"style="text-align: center; margin-top: 5%;margin-bottom: 5%;">
+    <h1>Careers</h1>
+</div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-3">
+            <div class="card">
+                <img src="https://images.pexels.com/photos/2467506/pexels-photo-2467506.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Kerala Cuisine">
+                <div class="card-body">
+                    <h5 class="card-title">DataScience</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae vulputate libero. Nullam tempus pulvinar sem, ut dictum nulla hend</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Village Life">
+                <div class="card-body">
+                    <h5 class="card-title">Artificial Intelligence</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae vulputate libero. Nullam tempus pulvinar sem, ut dictum nulla hend</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="https://images.pexels.com/photos/1109543/pexels-photo-1109543.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Festivals">
+                <div class="card-body">
+                    <h5 class="card-title">Fullstack Development</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae vulputate libero. Nullam tempus pulvinar sem, ut dictum nulla hend</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="https://images.pexels.com/photos/140945/pexels-photo-140945.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Backwaters">
+                <div class="card-body">
+                    <h5 class="card-title">Mern Stack</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae vulputate libero. Nullam tempus pulvinar sem, ut dictum nulla hend</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+
+
+<section>
+<div class="container" id="ser">
+
+  <div class="container"style="text-align: center; margin-top: 5%;margin-bottom: 5%;">
+    <h1>Services</h1>
+</div>
+		<div class="row mbr-justify-content-center">
+
+            <div class="col-lg-6 mbr-col-md-10">
+                <div class="wrap">
+                    <div class="ico-wrap">
+                        <span class="mbr-iconfont fa-volume-up fa"></span>
+                    </div>
+                    <div class="text-wrap vcenter">
+                        <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">Stay <span>Successful</span></h2>
+                        <p class="mbr-fonts-style text1 mbr-text display-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mbr-col-md-10">
+                <div class="wrap">
+                    <div class="ico-wrap">
+                        <span class="mbr-iconfont fa-calendar fa"></span>
+                    </div>
+                    <div class="text-wrap vcenter">
+                        <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">Create
+                            <span>An Effective Team</span>
+                        </h2>
+                        <p class="mbr-fonts-style text1 mbr-text display-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mbr-col-md-10">
+                <div class="wrap">
+                    <div class="ico-wrap">
+                        <span class="mbr-iconfont fa-globe fa"></span>
+                    </div>
+                    <div class="text-wrap vcenter">
+                        <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">Launch
+                            <span>A Unique Project</span>
+                        </h2>
+                        <p class="mbr-fonts-style text1 mbr-text display-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mbr-col-md-10">
+                <div class="wrap">
+                    <div class="ico-wrap">
+                        <span class="mbr-iconfont fa-trophy fa"></span>
+                    </div>
+                    <div class="text-wrap vcenter">
+                        <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">Achieve <span>Your Targets</span></h2>
+                        <p class="mbr-fonts-style text1 mbr-text display-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            
+        </div>
+
+</div>
+
+</section>
+<section class="our-webcoderskull padding-lg">
+  <div class="container">
+    <div class="row heading heading-icon">
+        <h2>Our Team</h2>
+    </div>
+    <ul class="row">
+      <li class="col-12 col-md-6 col-lg-3">
+          <div class="cnt-block equal-hight" style="height: 349px;">
+            <figure><img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/team/t3.jpg" class="img-responsive" alt=""></figure>
+            <h3><a href="http://www.webcoderskull.com/">Web coder</a></h3>
+            <p>Freelance Web Developer</p>
+           
+          </div>
+      </li>
+      <li class="col-12 col-md-6 col-lg-3">
+          <div class="cnt-block equal-hight" style="height: 349px;">
+            <figure><img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/team/t1.jpg" class="img-responsive" alt=""></figure>
+            <h3><a href="#">Web coder</a></h3>
+            <p>Freelance Web Developer</p>
+            
+          </div>
+      </li>
+      <li class="col-12 col-md-6 col-lg-3">
+          <div class="cnt-block equal-hight" style="height: 349px;">
+            <figure><img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/team/t2.jpg" class="img-responsive" alt=""></figure>
+            <h3><a href="http://www.webcoderskull.com/">Web coder </a></h3>
+            <p>Freelance Web Developer</p>
+           
+          </div>
+       </li>
+      <li class="col-12 col-md-6 col-lg-3">
+          <div class="cnt-block equal-hight" style="height: 349px;">
+            <figure><img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/team/t4.jpg" class="img-responsive" alt=""></figure>
+            <h3><a href="http://www.webcoderskull.com/">Web coder </a></h3>
+            <p>Freelance Web Developer</p>
+           
+          </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<section id="co" class="contact">
+  <!-- <div class="row justify-content-center">
+    <div class="col-md-10 col-xl-8 text-center">
+      <h3 class="mb-4">CONTACT US</h3>
+      <p class="mb-4 pb-2 mb-md-5 pb-md-0">
+        We build with more than just concrete and steel; we build long-standing relationships.
+      </p>
+    </div>
+  </div> -->
+  <div class="container" style="text-align: center; margin-top: 5%;margin-bottom: 5%;">
+    <h1>Contact Us</h1>
+  </div>
+  <div class="container">
+    <div class="row mt-1">
+      <div class="col-lg-6">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d251482.4572478722!2d76.13611769581762!3d9.98266969804492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d514abec6bf%3A0xbd582caa5844192!2sKochi%2C%20Kerala!5e0!3m2!1sen!2sin!4v1683952440329!5m2!1sen!2sin" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+      </div>
+      <div class="col-lg-6">
+        <form action="" method="post" role="form">
+          <div class="row">
+            <div class="col-lg-6 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="col-lg-6 form-group">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" name="message" rows="5" placeholder="Message"
+            required></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="about section-padding" id="ab" style="margin-bottom: 10%;">
+  
+  <div class="container" style="text-align: center; margin-top: 5%;margin-bottom: 5%;">
+    <h1>About Us</h1>
+  </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-12">
+				<div class="about-img"><img alt="" class="img-fluid" src="https://images.pexels.com/photos/443383/pexels-photo-443383.jpeg?auto=compress&cs=tinysrgb&w=600"></div>
+			</div>
+			<div class="col-lg-6 col-md-6 col-12">
+				<div class="about-text">
+					<h2>We Provide the Best Quality<br>
+						Services Ever</h2>
+					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam, labore reiciendis. Assumenda eos quod animi! Soluta nesciunt inventore dolores excepturi provident, culpa beatae tempora, explicabo corporis quibusdam corrupti. Autem, quaerat. Assumenda quo aliquam vel, nostrum explicabo ipsum dolor, ipsa perferendis porro doloribus obcaecati placeat natus iste odio est non earum?</p>
+					<a class="btn btn-primary" href="#">More Details</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+<footer class="page-footer">
+    <div class="container text-center text-md-left">
+      <div class="row">
+        <div class="col-md-3 mx-auto">
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Useful links</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Services</a>
+            </li>
+            <li>
+              <a href="#!">About</a>
+            </li>
+            <li>
+              <a href="#!">Contact</a>
+            </li>
+            <li>
+              <a href="#!">Works</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-6">
+              <h5 class="mt-3 mb-4">Contact Us</h5>
+              <p style="color: white;">
+                1234 Street Name, City Name<br>
+                Country<br>
+                Email: info@example.com<br>
+                Phone: +1 123-456-7890
+              </p>
+            </div>
+            <div class="col-md-6">
+              <h5 class="mt-3 mb-4">About Us</h5>
+              <p  style="color: white;">
+                1234 Street Name, City Name<br>
+                Country<br>
+                Email: info@example.com<br>
+                Phone: +1 123-456-7890
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mx-auto">
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Services</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Return Service</a>
+            </li>
+            <li>
+              <a href="#!">Payment Policy</a>
+            </li>
+            <li>
+              <a href="#!">EMI</a>
+            </li>
+            <li>
+              <a href="#!">Damage Service</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- <script>
+    window.onscroll = function() {myFunction()};
+    
+    function myFunction() {
+      var navbar = document.getElementById("myNavbar");
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    }
+    </script> -->
+
+   
+  
+</body>
+</html>
